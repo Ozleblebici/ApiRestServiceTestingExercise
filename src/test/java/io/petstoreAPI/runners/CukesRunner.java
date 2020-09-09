@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/petstoreFeatures",
         glue = "io/petstoreAPI/stepDef",
         dryRun = false,
-        tags = ""
+        tags = "@petStoreApi"
 )
 public class CukesRunner {
 }

@@ -1,13 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-08T22:52:13.988Z",
+        "start_timestamp": "2020-09-09T23:31:11.377Z",
         "before": [
           {
             "result": {
-              "duration": 412000000,
+              "duration": 420000000,
               "status": "passed"
             },
             "match": {
@@ -15,10 +15,10 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Validate pets quantity with getPetsByStatus method",
+        "line": 5,
+        "name": "Validate pets quantity with getPetsByStatus method in live Api server",
         "description": "",
-        "id": "validate-how-many-pets-have-the-status-“available”-and-the-name-“doggie”;validate-pets-quantity-with-getpetsbystatus-method",
+        "id": "validate-how-many-pets-have-the-status-“available”-and-the-name-“doggie”;validate-pets-quantity-with-getpetsbystatus-method-in-live-api-server",
         "after": [
           {
             "result": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 1667000000,
+              "duration": 2647000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "User send GET request to \"pet/findByStatus\" endpoint",
             "match": {
               "arguments": [
@@ -52,10 +52,10 @@
           },
           {
             "result": {
-              "duration": 49000000,
+              "duration": 54000000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "Verify that response status code is 200 and content type is \"application/json\"",
             "match": {
               "arguments": [
@@ -74,10 +74,10 @@
           },
           {
             "result": {
-              "duration": 573000000,
+              "duration": 570000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "User send a request for \"available\" pets status with query param",
             "match": {
               "arguments": [
@@ -92,10 +92,10 @@
           },
           {
             "result": {
-              "duration": 375000000,
+              "duration": 445000000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "User fetches pets quantity which \"name\" is \"doggie\"",
             "match": {
               "arguments": [
@@ -114,21 +114,183 @@
           },
           {
             "result": {
+              "error_message": "java.lang.AssertionError: --Expected Count is not same with actual one, because of the \u0027Varying Pet Store Live Service\u0027!--  expected:\u003c21\u003e but was:\u003c20\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat io.petstoreAPI.stepDef.StepDefinitions.verify_that_correct_pets_quantity_should_be_present_in_the_response(StepDefinitions.java:78)\r\n\tat ✽.Verify that correct pets quantity 21 should be present in the response(file:///C:/Users/ASUS/IdeaProjects/ApiRestServiceTestingExercise/src/test/resources/petstoreFeatures/GetPetsByStatus.feature:10)\r\n",
               "duration": 2000000,
-              "status": "passed"
+              "status": "failed"
             },
-            "line": 9,
-            "name": "Verify that correct pets quantity 28 should be present in the response",
+            "line": 10,
+            "name": "Verify that correct pets quantity 21 should be present in the response",
             "match": {
               "arguments": [
                 {
-                  "val": "28",
+                  "val": "21",
                   "offset": 34
                 }
               ],
               "location": "io.petstoreAPI.stepDef.StepDefinitions.verify_that_correct_pets_quantity_should_be_present_in_the_response(int)"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@petStoreApi"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-09T23:31:15.623Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.petstoreAPI.stepDef.Hooks.setup()"
+            }
+          },
+          {
+            "result": {
+              "duration": 452000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.petstoreAPI.stepDef.Hooks.setupWireMock()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Validate pets quantity with getPetsByStatus method in WireMock server",
+        "description": "",
+        "id": "validate-how-many-pets-have-the-status-“available”-and-the-name-“doggie”;validate-pets-quantity-with-getpetsbystatus-method-in-wiremock-server",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.petstoreAPI.stepDef.Hooks.tearDown()"
+            }
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.petstoreAPI.stepDef.Hooks.tearDownWireMock()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 240000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User send GET request to \"pet/findByStatus\" MOCK endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pet/findByStatus\"",
+                  "offset": 25
+                }
+              ],
+              "location": "io.petstoreAPI.stepDef.StepDefinitions.userSendGETRequestToMockEndpoint(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify that response status code is 200 and content type is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 36
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 60
+                }
+              ],
+              "location": "io.petstoreAPI.stepDef.StepDefinitions.verifyThatResponseStatusCodeIsAndContentTypeIs(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 37000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User send a request for \"available\" pets status with query param",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"available\"",
+                  "offset": 24
+                }
+              ],
+              "location": "io.petstoreAPI.stepDef.StepDefinitions.userSendARequestForPetsStatusWithQueryParam(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User fetches pets quantity which \"name\" is \"doggie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"doggie\"",
+                  "offset": 43
+                }
+              ],
+              "location": "io.petstoreAPI.stepDef.StepDefinitions.userFetchesPetsQuantityWhichIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify that correct pets quantity 10 should be present in the response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 34
+                }
+              ],
+              "location": "io.petstoreAPI.stepDef.StepDefinitions.verify_that_correct_pets_quantity_should_be_present_in_the_response(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@petStoreApi"
+          },
+          {
+            "name": "@wireMock"
           }
         ]
       }
@@ -138,6 +300,15 @@
     "id": "validate-how-many-pets-have-the-status-“available”-and-the-name-“doggie”",
     "keyword": "Feature",
     "uri": "file:src/test/resources/petstoreFeatures/GetPetsByStatus.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@petStoreApi",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

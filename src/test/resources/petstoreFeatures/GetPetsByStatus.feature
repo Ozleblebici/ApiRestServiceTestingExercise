@@ -1,13 +1,23 @@
+@petStoreApi
 Feature: Validate how many pets have the status “available” and the name “doggie”
 
 
-  Scenario: Validate pets quantity with getPetsByStatus method
+  Scenario: Validate pets quantity with getPetsByStatus method in live Api server
     Given User send GET request to "pet/findByStatus" endpoint
     Then Verify that response status code is 200 and content type is "application/json"
     When User send a request for "available" pets status with query param
     And User fetches pets quantity which "name" is "doggie"
-    Then Verify that correct pets quantity 28 should be present in the response
+    Then Verify that correct pets quantity 21 should be present in the response
 
+
+
+    @wireMock
+  Scenario: Validate pets quantity with getPetsByStatus method in WireMock server
+    Given User send GET request to "pet/findByStatus" MOCK endpoint
+    Then Verify that response status code is 200 and content type is "application/json"
+    When User send a request for "available" pets status with query param
+    And User fetches pets quantity which "name" is "doggie"
+    Then Verify that correct pets quantity 10 should be present in the response
 
 
 

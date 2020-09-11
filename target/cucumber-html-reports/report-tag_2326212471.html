@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber HTML Reports</td>
         <td>1</td>
-      <td>10 Sep 2020, 00:24</td>
+      <td>11 Sep 2020, 01:22</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@petStoreApi</td>
-          <td      class="passed"    >9</td>
-          <td      class="failed"    >1</td>
+          <td      class="passed"    >10</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">10</td>
 
-          <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >2</td>
+          <td >0</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="3167000000">3.167</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="2820000000">2.820</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -183,12 +183,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.944</span>
+  <span class="lead-duration duration">2.612</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Validate pets quantity with getPetsByStatus method in live Api server</span>
 
@@ -199,7 +199,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -221,7 +221,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">io.petstoreAPI.stepDef.Hooks.setup()</span>
 
-  <span class="lead-duration duration">0.469</span>
+  <span class="lead-duration duration">0.396</span>
 
           </div>
 
@@ -238,9 +238,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -250,7 +250,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -258,7 +258,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">User send GET request to <span class="argument">&quot;pet/findByStatus&quot;</span> endpoint</span>
 
-  <span class="lead-duration duration">1.899</span>
+  <span class="lead-duration duration">1.622</span>
 
 </div>
 
@@ -285,7 +285,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Verify that response status code is <span class="argument">200</span> and content type is <span class="argument">&quot;application/json&quot;</span></span>
 
-  <span class="lead-duration duration">0.042</span>
+  <span class="lead-duration duration">0.039</span>
 
 </div>
 
@@ -312,7 +312,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User send a request for <span class="argument">&quot;available&quot;</span> pets status with query param</span>
 
-  <span class="lead-duration duration">0.579</span>
+  <span class="lead-duration duration">0.559</span>
 
 </div>
 
@@ -339,7 +339,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User fetches pets quantity which <span class="argument">&quot;name&quot;</span> is <span class="argument">&quot;doggie&quot;</span></span>
 
-  <span class="lead-duration duration">0.421</span>
+  <span class="lead-duration duration">0.392</span>
 
 </div>
 
@@ -362,11 +362,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">Verify that correct pets quantity <span class="argument">21</span> should be present in the response</span>
+  <span class="name">Verify that correct pets quantity <span class="argument">172</span> should be present in the response</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -374,23 +374,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: --Expected Count is not same with actual one, because of the 'Varying Pet Store Live Service'!--  expected:&lt;21&gt; but was:&lt;17&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at io.petstoreAPI.stepDef.StepDefinitions.verify_that_correct_pets_quantity_should_be_present_in_the_response(StepDefinitions.java:78)
-	at &#10045;.Verify that correct pets quantity 21 should be present in the response(file:///C:/Users/ASUS/IdeaProjects/ApiRestServiceTestingExercise/src/test/resources/petstoreFeatures/GetPetsByStatus.feature:10)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -410,7 +393,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -422,13 +405,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-5" class="inner-level collapse collapsable-details ">
+    <div id="after-4" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">io.petstoreAPI.stepDef.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
@@ -460,10 +443,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.223</span>
+  <span class="lead-duration duration">0.208</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -476,11 +459,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-6" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-7">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -492,13 +475,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-7" class="inner-level collapse collapsable-details ">
+    <div id="before-6" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">io.petstoreAPI.stepDef.Hooks.setup()</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
@@ -514,7 +497,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">io.petstoreAPI.stepDef.Hooks.setupWireMock()</span>
 
-  <span class="lead-duration duration">0.418</span>
+  <span class="lead-duration duration">0.337</span>
 
           </div>
 
@@ -531,7 +514,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -543,7 +526,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-8" class="inner-level collapse collapsable-details ">
+  <div id="steps-7" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -551,7 +534,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">User send GET request to <span class="argument">&quot;pet/findByStatus&quot;</span> MOCK endpoint</span>
 
-  <span class="lead-duration duration">0.195</span>
+  <span class="lead-duration duration">0.172</span>
 
 </div>
 
@@ -578,7 +561,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">Verify that response status code is <span class="argument">200</span> and content type is <span class="argument">&quot;application/json&quot;</span></span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -605,7 +588,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User send a request for <span class="argument">&quot;available&quot;</span> pets status with query param</span>
 
-  <span class="lead-duration duration">0.022</span>
+  <span class="lead-duration duration">0.030</span>
 
 </div>
 
@@ -632,7 +615,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User fetches pets quantity which <span class="argument">&quot;name&quot;</span> is <span class="argument">&quot;doggie&quot;</span></span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -686,7 +669,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-9">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -698,13 +681,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-9" class="inner-level collapse collapsable-details ">
+    <div id="after-8" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">io.petstoreAPI.stepDef.Hooks.tearDown()</span>
+              <span class="location name">io.petstoreAPI.stepDef.Hooks.tearDownWireMock()</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.013</span>
 
           </div>
 
@@ -718,9 +701,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">io.petstoreAPI.stepDef.Hooks.tearDownWireMock()</span>
+              <span class="location name">io.petstoreAPI.stepDef.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.008</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 

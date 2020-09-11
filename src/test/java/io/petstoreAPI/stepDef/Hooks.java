@@ -23,14 +23,14 @@ public class Hooks {
 
     @Before("@wireMock")
     public void setupWireMock(){
-        System.out.println("MOCK HOOK SETUP");
+
         wireMockStub.setup();
     }
 
 
     @After ("@wireMock")
     public void tearDownWireMock(){
-        System.out.println("MOCK HOOK tear Down");
+
         wireMockStub.teardown();
     }
 

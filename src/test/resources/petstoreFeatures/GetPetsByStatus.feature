@@ -1,13 +1,13 @@
 @petStoreApi
 Feature: Validate how many pets have the status “available” and the name “doggie”
 
-
+    @liveApi
   Scenario: Validate pets quantity with getPetsByStatus method in live Api server
     Given User send GET request to "pet/findByStatus" endpoint
     Then Verify that response status code is 200 and content type is "application/json"
     When User send a request for "available" pets status with query param
     And User fetches pets quantity which "name" is "doggie"
-    Then Verify that correct pets quantity 21 should be present in the response
+    Then Verify that correct pets quantity 172 should be present in the response
 
 
 

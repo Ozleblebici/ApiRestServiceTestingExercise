@@ -1,0 +1,11 @@
+io\petstoreAPI\pojoClasses\Petstore.class
+io\petstoreAPI\mock\WireMockStub.class
+io\petstoreAPI\pojoClasses\Tag.class
+io\petstoreAPI\pojoClasses\Category.class
+io\petstoreAPI\baseUtilies\ConfigurationReader.class
+io\petstoreAPI\request\GetRequest.class
+io\petstoreAPI\stepDef\Hooks.class
+io\petstoreAPI\stepDef\StepDefinitions.class
+io\petstoreAPI\runners\CukesRunner.class
+io\petstoreAPI\runners\FailedRunner.class
+io\petstoreAPI\pojoClasses\PetStatus.class

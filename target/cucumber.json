@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-11T00:21:57.087Z",
+        "start_timestamp": "2020-09-21T21:32:03.597Z",
         "before": [
           {
             "result": {
-              "duration": 396000000,
+              "duration": 442000000,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1622000000,
+              "duration": 1829000000,
               "status": "passed"
             },
             "line": 6,
@@ -52,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 39000000,
+              "duration": 37000000,
               "status": "passed"
             },
             "line": 7,
@@ -74,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 559000000,
+              "duration": 563000000,
               "status": "passed"
             },
             "line": 8,
@@ -92,7 +92,7 @@
           },
           {
             "result": {
-              "duration": 392000000,
+              "duration": 567000000,
               "status": "passed"
             },
             "line": 9,
@@ -114,14 +114,16 @@
           },
           {
             "result": {
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: --Expected Count is not same with actual one, because of the \u0027Varying Pet Store Live Service\u0027!--  expected:\u003c287\u003e but was:\u003c276\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat io.petstoreAPI.stepDef.StepDefinitions.verify_that_correct_pets_quantity_should_be_present_in_the_response(StepDefinitions.java:85)\r\n\tat ✽.Verify that correct pets quantity 287 should be present in the response(file:///C:/Users/ASUS/IdeaProjects/ApiRestServiceTestingExercise/src/test/resources/petstoreFeatures/GetPetsByStatus.feature:10)\r\n",
+              "duration": 3000000,
+              "status": "failed"
             },
             "line": 10,
-            "name": "Verify that correct pets quantity 172 should be present in the response",
+            "name": "Verify that correct pets quantity 287 should be present in the response",
             "match": {
               "arguments": [
                 {
-                  "val": "172",
+                  "val": "287",
                   "offset": 34
                 }
               ],
@@ -133,14 +135,18 @@
         "tags": [
           {
             "name": "@petStoreApi"
+          },
+          {
+            "name": "@liveApi"
           }
         ]
       },
       {
-        "start_timestamp": "2020-09-11T00:22:00.179Z",
+        "start_timestamp": "2020-09-21T21:32:07.138Z",
         "before": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "match": {
@@ -149,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 337000000,
+              "duration": 420000000,
               "status": "passed"
             },
             "match": {
@@ -164,19 +170,20 @@
         "after": [
           {
             "result": {
-              "duration": 13000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "io.petstoreAPI.stepDef.Hooks.tearDownWireMock()"
-            }
-          },
-          {
-            "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "match": {
               "location": "io.petstoreAPI.stepDef.Hooks.tearDown()"
+            }
+          },
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "io.petstoreAPI.stepDef.Hooks.tearDownWireMock()"
             }
           }
         ],
@@ -185,7 +192,7 @@
         "steps": [
           {
             "result": {
-              "duration": 172000000,
+              "duration": 195000000,
               "status": "passed"
             },
             "line": 16,
@@ -203,7 +210,7 @@
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 2000000,
               "status": "passed"
             },
             "line": 17,
@@ -225,7 +232,7 @@
           },
           {
             "result": {
-              "duration": 30000000,
+              "duration": 29000000,
               "status": "passed"
             },
             "line": 18,
@@ -243,7 +250,7 @@
           },
           {
             "result": {
-              "duration": 5000000,
+              "duration": 4000000,
               "status": "passed"
             },
             "line": 19,

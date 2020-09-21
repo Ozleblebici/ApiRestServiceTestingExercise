@@ -1,4 +1,4 @@
-package io.petstoreAPI.pojoClasses;
+package io.petstoreAPI.baseUtilies;
 
 public enum PetStatus {
 

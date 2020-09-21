@@ -1,7 +1,7 @@
 package io.petstoreAPI.request;
 
 
-import io.petstoreAPI.pojoClasses.PetStatus;
+import io.petstoreAPI.baseUtilies.PetStatus;
 import io.petstoreAPI.stepDef.Hooks;
 import io.petstoreAPI.stepDef.StepDefinitions;
 import io.restassured.response.Response;
@@ -41,7 +41,7 @@ public class GetRequest {
         if (StepDefinitions.mockFlag) {
             response = Hooks.wireMockStub.getStubbedResponse(petStatus, endPoint);
         } else {
-            response = given().param("status", petStatus.toString()).when()
+            response = given().queryParam("status", petStatus.toString()).when()
                     .get(endPoint);
         }
         return response;

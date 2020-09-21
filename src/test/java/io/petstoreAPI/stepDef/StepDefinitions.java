@@ -1,14 +1,12 @@
 package io.petstoreAPI.stepDef;
 
 import io.cucumber.java.en.*;
-import io.petstoreAPI.pojoClasses.PetStatus;
+import io.petstoreAPI.baseUtilies.PetStatus;
 import io.petstoreAPI.pojoClasses.Petstore;
 import io.petstoreAPI.request.GetRequest;
-import io.restassured.internal.ResponseSpecificationImpl;
 import io.restassured.response.Response;
 
 import lombok.extern.slf4j.Slf4j;
-import org.hamcrest.MatcherAssert;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,7 +48,7 @@ public class StepDefinitions {
     @When("User send a request for {string} pets status with query param")
     public void userSendARequestForPetsStatusWithQueryParam(String status) {
 
-        Assert.assertEquals("Server is down!", 200, response.getStatusCode());
+       // Assert.assertEquals("Server is down!", 200, response.getStatusCode());
         try {
             response = getRequest.getPetsByStatus(PetStatus.valueOf(status));
 
@@ -66,10 +64,16 @@ public class StepDefinitions {
         Petstore[] allPets = response.body().as(Petstore[].class);
 
         for (Petstore pet : allPets) {
-            if (pet.getName().equals(value)) {
-                countOfValue++;
+            try {
+                if (pet.getName().equals(value)) {
+                    countOfValue++;
+                }
+            }catch (NullPointerException e){
+               // e.printStackTrace();
             }
         }
+
+      //as a second way  response.path(key)
     }
 
 

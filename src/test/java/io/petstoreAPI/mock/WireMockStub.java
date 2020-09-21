@@ -1,9 +1,8 @@
 package io.petstoreAPI.mock;
 
-
 import com.github.tomakehurst.wiremock.WireMockServer;
 import io.petstoreAPI.baseUtilies.ConfigurationReader;
-import io.petstoreAPI.pojoClasses.PetStatus;
+import io.petstoreAPI.baseUtilies.PetStatus;
 import io.restassured.response.Response;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
@@ -27,7 +26,6 @@ public class WireMockStub {
                         .withStatus(200)
                         .withBodyFile("data/pets.json")));
 
-
     }
 
 
@@ -44,8 +42,6 @@ public class WireMockStub {
                 get("http://localhost:"+port+ "/v2/"+ endPoint +"?status=available");
         return response;
     }
-
-
 
     public void teardown () {
         wireMockServer.stop();

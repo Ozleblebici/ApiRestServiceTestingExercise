@@ -7,13 +7,13 @@ import io.petstoreAPI.request.GetRequest;
 import io.restassured.response.Response;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import static io.restassured.RestAssured.given;
 
-@Slf4j
+//@Slf4j
 public class StepDefinitions {
 
     Response response;
@@ -21,12 +21,12 @@ public class StepDefinitions {
     int countOfValue;
     public static boolean mockFlag = false;
 
-    Logger logger = LoggerFactory.getLogger(StepDefinitions.class);
-    // TODO go on logging here
+    private static final Logger stepDefLogger = Logger.getLogger(StepDefinitions.class);
 
     @Given("User send GET request to {string} endpoint")
     public void userSendGETRequestToEndpoint(String endPoint) {
 
+        stepDefLogger.info("get Rewquest with end point, without query param, mock flag is " + mockFlag);
         response = getRequest.getWithEndPoint(endPoint);
 
     }
@@ -35,6 +35,7 @@ public class StepDefinitions {
     public void userSendGETRequestToMockEndpoint(String endPoint) {
 
         mockFlag = true;
+        stepDefLogger.info("get Rewquest with end point, without query param, mock flag is " + mockFlag);
         response = getRequest.getWithEndPoint(endPoint);
 
     }
@@ -53,6 +54,7 @@ public class StepDefinitions {
             response = getRequest.getPetsByStatus(PetStatus.valueOf(status));
 
         } catch (IllegalArgumentException e) {
+            stepDefLogger.info("Invalid Pet status entered, Illegal Argument exception!");
             Assert.fail("Wrong Pet Status value entered! Check your pet status!");
         }
 

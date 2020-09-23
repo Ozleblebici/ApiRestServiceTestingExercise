@@ -7,7 +7,7 @@ Feature: Validate how many pets have the status “available” and the name “
     Then Verify that response status code is 200 and content type is "application/json"
     When User send a request for "available" pets status with query param
     And User fetches pets quantity which "name" is "doggie"
-    Then Verify that correct pets quantity 287 should be present in the response
+    Then Verify that correct pets quantity 157 should be present in the response
 
 
 

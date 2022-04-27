@@ -7,7 +7,7 @@
 
 talha43gs@gmail.com
 
-https://www.linkedin.com/in/talha-ozleblebici-1b7660189/
+https://www.linkedin.com/in/talha-ozleblebici
 
 
 **- Build Tool:** Maven
